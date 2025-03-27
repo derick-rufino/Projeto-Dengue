@@ -63,12 +63,13 @@ main {
     min-height: 90vh;
     height: fit-content;
     position: relative;
+
+    display: flex;
+    flex-direction: row-reverse;
 }
 
-section {border: solid 1px black;}
-
 #img-holder{
-    width: 100%;
+    width: fit-content;
     min-height: 40vh;
     max-height: 50vh;
 
@@ -77,4 +78,27 @@ section {border: solid 1px black;}
     justify-content: center;
 }
 
-#img-holder > img {width: 30%}
+#img-holder > img {width: 100%}
+
+#desc-s {
+    width: 100%;
+
+    padding: 20px;
+    overflow: scroll;
+}
+/* escondendo a scrollbar da seção de descrição */
+::-webkit-scrollbar {
+    display: none;
+}
+
+p{
+    white-space: pre-line;
+    overflow: scroll;
+
+    font-size: small;
+    word-spacing: 5px;
+}
+
+li{
+    margin: 50px;
+}
