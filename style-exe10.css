@@ -7,13 +7,18 @@
 body{
     margin: 0 100px;
     background: #71692c;
+    display: flex;
+    flex-direction: column;
 }
 
 header , main , aside , footer {
-    border: solid 1px black;
+    border: solid 1px black none;
 }
 
 header{
+    background-color: cornflowerblue;
+
+    border-bottom: solid 5px #3360b3;
     width: 100%;
     padding: 10px;
     height: fit-content;
@@ -24,9 +29,7 @@ header{
 aside{
     background-color: #8dafed;
     width: fit-content;
-    height: 100vh;
-
-    float: left;
+    height: 90vh;
 
     display: flex;
     flex-direction: column;
@@ -34,25 +37,44 @@ aside{
     position: sticky;
 }
 
-aside > a {
+aside > button {
     color: #000f1b;
     text-decoration: none;
+    text-align: left;
 
     background-color: cornflowerblue;
     padding: 10px;
 
+    border: none;
     border-left: solid 10px #3360b3;
 }
 
-aside > a:hover {
+div{display: flex;
+flex-direction: row-reverse;}
+
+aside > button:hover {
     background-color: #3360b3;
     color:aliceblue;
     transition: ease 200ms;}
 
 main {
     background-color: #b1c9f5;
-    width: auto;
-    height: 100vh;
-
-float: right;
+    width: 100%;
+    min-height: 90vh;
+    height: fit-content;
+    position: relative;
 }
+
+section {border: solid 1px black;}
+
+#img-holder{
+    width: 100%;
+    min-height: 40vh;
+    max-height: 50vh;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#img-holder > img {width: 30%}
